@@ -7,13 +7,25 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Smart EcoWaste"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="24dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
         android:id="@+id/title_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/title"
         android:textStyle="bold"
-        android:textSize="16sp"
-        android:layout_marginTop="50dp"
+        android:textSize="24sp"
+        android:layout_marginTop="100dp"
         android:layout_marginStart="20dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +38,7 @@
         android:id="@+id/card_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="400dp"
         app:cardBackgroundColor="@color/green"
         app:cardCornerRadius="24dp"
         android:layout_marginStart="10dp"
@@ -36,7 +48,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title_tv">
+        app:layout_constraintTop_toBottomOf="@id/title_tv"
+        app:cardElevation="10dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -48,7 +61,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/smart_ecowaste"
-            android:textSize="20sp"
+            android:textSize="24sp"
             android:textStyle="bold"
             android:layout_marginStart="16dp"
             android:layout_marginTop="30dp"
@@ -65,10 +78,84 @@
             app:layout_constraintStart_toEndOf="@id/ecowasteTv"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="60dp"
-            app:layout_constraintHorizontal_bias="0.8"
+            android:layout_marginTop="40dp"
+            app:layout_constraintHorizontal_bias="0.6"
             />
 
+        <androidx.cardview.widget.CardView
+            android:id="@+id/organik_CV"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ecowasteTv"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="60dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="organik"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="40dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10 KG"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="20dp"
+                    android:textSize="16sp"
+                    />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/anorganik_cv"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toEndOf="@id/organik_CV"
+                app:layout_constraintTop_toTopOf="@id/organik_CV"
+                app:layout_constraintBottom_toBottomOf="@id/organik_CV"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:cardCornerRadius="20dp"
+                android:elevation="10dp"
+                app:cardElevation="10dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Anorganik"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="40dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10 KG"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginTop="20dp"
+                        android:textSize="16sp"
+                        />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
